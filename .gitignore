@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules
+.next
+out
+
+# Secrets: never commit these (API keys, tokens, passwords).
+# Put secrets in .env.local; it stays on your computer.
+.env*
+!.env.example
+*.pem
+
+# Misc
+.DS_Store
+.vercel
+npm-debug.log*
