@@ -14,7 +14,7 @@ export default function WorkPage() {
       <PageHeader
         title="Work"
         lead="Things I’ve built, each with a link so you can try it yourself."
-        figure={{ number: 4, pose: "point", caption: "This way to the projects.", greeting: "Check this out!" }}
+        figure={{ number: 4, pose: "pointDown", caption: "This way to the projects.", greeting: "Check this out!" }}
       />
 
       <ol className="mx-auto mt-14 max-w-6xl px-5 sm:px-8">

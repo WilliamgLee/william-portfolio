@@ -61,7 +61,7 @@ const REACTIONS = {
 };
 
 /**
- * pose: "stand" | "wave" | "point" | "hold" | "sit"
+ * pose: "stand" | "wave" | "point" | "pointDown" | "hold" | "sit"
  * res: height of the internal canvas in pixels. Lower = chunkier pixels.
  * assemble: build the avatar block by block when it mounts (used by the intro).
  * driveRef: optional ref the intro updates every frame with

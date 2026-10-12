@@ -22,6 +22,12 @@ const contentSecurityPolicy = [
   "frame-ancestors 'self'",
 ].join("; ");
 
+// The birthday page (/projects/happy-birthday.html) loads its two pixel fonts
+// from Google Fonts, so it gets the same policy plus those two font hosts.
+const birthdayPolicy = contentSecurityPolicy
+  .replace("style-src 'self' 'unsafe-inline'", "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com")
+  .replace("font-src 'self'", "font-src 'self' https://fonts.gstatic.com");
+
 const securityHeaders = [
   { key: "Content-Security-Policy", value: contentSecurityPolicy },
   // Don't let browsers guess file types (stops some file-based attacks).
@@ -46,7 +52,14 @@ const nextConfig = {
   // Don't advertise "X-Powered-By: Next.js" to everyone.
   poweredByHeader: false,
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // Listed last so its Content-Security-Policy replaces the one above for this page only.
+      {
+        source: "/projects/happy-birthday.html",
+        headers: [{ key: "Content-Security-Policy", value: birthdayPolicy }],
+      },
+    ];
   },
 };
 

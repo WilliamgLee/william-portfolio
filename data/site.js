@@ -84,6 +84,17 @@ export const site = {
       url: "/projects/100-soal-pemrograman-c.pdf",
       cta: "Open the PDF",
     },
+    {
+      title: "Pixel Birthday",
+      hook: "A birthday card you can play.",
+      pitch:
+        "A birthday surprise built like a tiny video game. Two pixel avatars meet at a cake, four gifts wait to be opened, and every gift unlocks a message. Open them all, then blow out the candles.",
+      description:
+        "An interactive pixel-art birthday card on a single canvas. Original chiptune music made with the Web Audio API, RPG-style dialog boxes, an item-collected animation, and layouts tuned for phones in portrait and landscape.",
+      image: "/img/ultah.jpg",
+      url: "/projects/happy-birthday.html",
+      cta: "Open the surprise",
+    },
   ],
 
   contact: {
