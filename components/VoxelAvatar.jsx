@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { avatarConfig } from "@/lib/avatar-config";
 import { buildModel, getPose, renderScene } from "@/lib/voxel";
 import { flyAvatar, registerTravelAvatar, takePendingTravel } from "@/lib/avatar-travel";
+import { playAnnoyed, playHop } from "@/lib/sfx";
 import SpeechBubble from "./SpeechBubble";
 
 const MODEL = buildModel(avatarConfig);
@@ -312,8 +313,10 @@ export default function VoxelAvatar({
     if (taps.current.length >= 4) {
       taps.current = [];
       react("annoyed");
+      playAnnoyed();
     } else {
       react("hop");
+      playHop();
     }
   };
 

@@ -42,8 +42,8 @@ Intro dan halaman Work menyesuaikan sendiri dengan jumlah project. Di intro, sat
 | Kalau pengunjung... | Avatar... |
 | --- | --- |
 | Membuka halaman | Menyapa lewat balon ucapan piksel, beda di tiap halaman |
-| Tap atau klik avatar | Loncat senang |
-| Tap 4 kali dengan cepat | Kesal, geleng-geleng sambil melipat tangan |
+| Tap atau klik avatar | Loncat senang, dengan bunyi "boing" |
+| Tap 4 kali dengan cepat | Kesal, geleng-geleng sambil melipat tangan, dengan bunyi menggerutu |
 | Diam 15 detik | Ketiduran, muncul "zZz" |
 | Bergerak lagi setelah itu | Kaget, lalu bangun |
 | Pindah halaman lewat menu | Terbang salto ke posisi avatar di halaman baru, lalu mendarat |
@@ -67,7 +67,7 @@ Ketik di mana saja (tanpa perlu klik kolom apa pun):
 | `dance` atau `joget` | Joget 12 detik diiringi musik chiptune |
 | `sleep` atau `tidur` | Langsung ketiduran |
 
-Ekspresi dan pose ada di `lib/voxel.js` (`buildFace` dan `getPose`), reaksi dan kalimatnya di `components/VoxelAvatar.jsx` (`LINES` dan `REACTIONS`), kata rahasia di `components/AvatarExtras.jsx`, dan animasi terbang antar halaman di `lib/avatar-travel.js`.
+Ekspresi dan pose ada di `lib/voxel.js` (`buildFace` dan `getPose`), reaksi dan kalimatnya di `components/VoxelAvatar.jsx` (`LINES` dan `REACTIONS`), kata rahasia di `components/AvatarExtras.jsx`, animasi terbang antar halaman di `lib/avatar-travel.js`, dan bunyi saat avatar di-tap di `lib/sfx.js`.
 
 Bagian lain situs bisa memicu reaksi avatar dengan event:
 
