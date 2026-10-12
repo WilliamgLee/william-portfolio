@@ -11,7 +11,8 @@ const BLOCKS = countBlocks(buildModel(avatarConfig));
 
 // Timeline in BEATS (80 BPM, 1 beat = 0.75 s), matched to lib/intro-music.js.
 // One bar (4 beats, 3 s) per project; a single project gets two bars.
-const BEATS_PER_PROJECT = site.projects.length === 1 ? 8 : 4;
+// 1 project: 2 bars. 2 projects: 1.5 bars each, so the pitch can still be read. 3+: 1 bar each.
+const BEATS_PER_PROJECT = site.projects.length === 1 ? 8 : site.projects.length === 2 ? 6 : 4;
 const HANDOVER = 8 + site.projects.length * BEATS_PER_PROJECT;
 const STEPS = { hi: 0, name: 2, tagline: 4, projects: 8, handover: HANDOVER, end: HANDOVER + 2 };
 const SCENES = ["hi", "name", "tagline", "projects"];

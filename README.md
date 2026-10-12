@@ -35,7 +35,7 @@ Kalau foto kamu bukan `.jpg`, ganti juga ekstensinya di `data/site.js`.
 2. Di `data/site.js`, salin blok project Bingo Math dan isi `title`, `hook`, `pitch`, `description`, `image`, `url`.
 3. Kalau project-nya berupa file HTML seperti Bingo Math, taruh di `public/projects/` lalu isi `url` dengan `/projects/nama-file.html`.
 
-Intro dan halaman Work menyesuaikan sendiri dengan jumlah project. Satu project dapat 2 bar musik (6 detik) di intro, dua project atau lebih dapat 1 bar (3 detik) per project, dan musiknya ikut memanjang.
+Intro dan halaman Work menyesuaikan sendiri dengan jumlah project. Di intro, satu project dapat 2 bar musik (6 detik), dua project masing-masing 1,5 bar (4,5 detik), dan tiga project atau lebih masing-masing 1 bar (3 detik). Musiknya ikut memanjang. Karena waktunya pendek, buat `pitch` tetap singkat (sekitar 130 karakter) supaya sempat terbaca.
 
 ## Avatar
 
