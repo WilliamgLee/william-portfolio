@@ -23,11 +23,12 @@ export default function HomePage() {
 
         <div className="hero-copy md:col-span-7 md:pl-6">
           <StatusBadge className="enter mb-7" style={{ "--i": 0 }} />
-          <h1 className="font-serif text-[clamp(4rem,11vw,9.5rem)] font-normal leading-[0.86] tracking-[-0.035em]">
-            <span className="enter block" style={{ "--i": 0 }}>
+          {/* Phones: one line. Larger screens: two staggered lines. */}
+          <h1 className="whitespace-nowrap font-serif text-[clamp(2.75rem,15vw,5rem)] font-normal leading-[0.86] tracking-[-0.035em] md:whitespace-normal md:text-[clamp(4rem,11vw,9.5rem)]">
+            <span className="enter inline-block md:block" style={{ "--i": 0 }}>
               {first}
-            </span>
-            <span className="enter block pl-[0.6em]" style={{ "--i": 1 }}>
+            </span>{" "}
+            <span className="enter inline-block md:block md:pl-[0.6em]" style={{ "--i": 1 }}>
               {last}
             </span>
           </h1>
