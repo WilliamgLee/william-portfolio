@@ -13,7 +13,7 @@ export const site = {
 
   // Your site's address once it's online, e.g. "https://williamlee.my.id".
   // Link previews (WhatsApp, LinkedIn, X) need it to find the preview image.
-  url: "",
+  url: "https://william-lee.dev",
 
   // Profile photo (not used on the site yet; the link preview uses app/opengraph-image.png).
   profilePhoto: "/img/fotoprofil.jpg",
