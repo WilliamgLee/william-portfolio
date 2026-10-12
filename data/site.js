@@ -111,15 +111,16 @@ export const site = {
   contact: {
     heading: "Have something in mind?",
     line: "Email is the fastest way to reach me.",
-    email: "your.email@example.com", // replace with your real email
+    email: "hello@william-lee.dev", // forwarded to Gmail via Name.com Email Forwarding
   },
 
   // icon: camera | terminal | robot | briefcase (pixel icons in components/PixelIcon.jsx)
   // line: what the avatar says when the button is hovered on the Contact page.
   socials: [
-    { label: "Instagram", url: "#", icon: "camera", line: "Photos and stories!" },
-    { label: "GitHub", url: "#", icon: "terminal", line: "That's where my code lives." },
-    { label: "Hugging Face", url: "#", icon: "robot", line: "My AI experiments!" },
-    { label: "LinkedIn", url: "#", icon: "briefcase", line: "The serious me." },
+    { label: "GitHub", url: "https://github.com/WilliamgLee", icon: "terminal", line: "That's where my code lives." },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/williamglee", icon: "briefcase", line: "The serious me." },
+    { label: "Instagram", url: "https://www.instagram.com/_lee.willi4m/", icon: "camera", line: "Photos and stories!" },
+    // Add back once the profile exists:
+    // { label: "Hugging Face", url: "https://huggingface.co/...", icon: "robot", line: "My AI experiments!" },
   ],
 };
