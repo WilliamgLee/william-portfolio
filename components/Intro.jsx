@@ -85,14 +85,22 @@ export default function Intro() {
   const start = async () => {
     if (step !== "gate") return;
     setStep("hi");
-    const music = createIntroMusic({ handoverBeat: HANDOVER });
+    let music = createIntroMusic({ handoverBeat: HANDOVER });
     musicRef.current = music;
+    const withSound = music ? await music.start() : false;
+    if (!withSound && music) {
+      // Audio is locked (some phones): play the intro silently on the normal clock.
+      music.stop();
+      music = null;
+      musicRef.current = null;
+    }
     const fallbackStart = performance.now() + 100;
-    if (music) await music.start();
 
     // Read the time from the audio clock every frame, so scenes land on the beat.
+    // Without sound, fall back to the page clock. The choice is made once, so the
+    // timeline never jumps between the two clocks.
     const tick = () => {
-      const seconds = music && music.running() ? music.now() : (performance.now() - fallbackStart) / 1000;
+      const seconds = music ? music.now() : (performance.now() - fallbackStart) / 1000;
       const b = seconds / BEAT;
       driveRef.current = { ...choreography(b), say: introLine(b), beat: b };
       setBeat(b);
@@ -180,7 +188,9 @@ export default function Intro() {
       className={`intro fixed inset-0 z-50 overflow-hidden transition-colors duration-[1300ms] ${
         handover ? "bg-transparent" : "bg-paper"
       }`}
-      onPointerDown={(e) => {
+      // A click (not pointerdown) counts as a "real" tap on phones, which is
+      // what browsers require before they let audio play.
+      onClick={(e) => {
         if (step === "gate" && !e.target.closest("button")) start();
       }}
     >
