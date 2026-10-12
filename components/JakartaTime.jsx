@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import VoxelAvatar from "./VoxelAvatar";
+import Mailbox from "./Mailbox";
 
 // Time in Jakarta (WIB), wherever the visitor is.
 function jakarta(options) {
@@ -43,7 +44,8 @@ export function ContactAvatar({ className = "" }) {
   // Decided once, in the browser. The markup is the same either way, so no hydration mismatch.
   const [night] = useState(() => typeof window !== "undefined" && isNightInJakarta());
   return (
-    <figure className={className}>
+    <figure className={`relative ${className}`}>
+      <Mailbox className="absolute bottom-[5%] right-[-50%] w-[44%] md:left-[-34%] md:right-auto" />
       <VoxelAvatar
         interactive
         pose="wave"

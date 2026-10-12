@@ -234,3 +234,13 @@ html[data-intro="skip"] .intro {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Contact mailbox: a little hop when mail arrives */
+.mailbox-bump { animation: mailbox-bump 0.42s steps(4); transform-origin: 50% 100%; }
+@keyframes mailbox-bump {
+  0% { transform: translateY(0) scale(1, 1); }
+  35% { transform: translateY(-6%) scale(0.96, 1.06); }
+  70% { transform: translateY(0) scale(1.05, 0.95); }
+  100% { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .mailbox-bump { animation: none; } }

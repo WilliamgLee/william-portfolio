@@ -114,10 +114,12 @@ export const site = {
     email: "your.email@example.com", // replace with your real email
   },
 
+  // icon: camera | terminal | robot | briefcase (pixel icons in components/PixelIcon.jsx)
+  // line: what the avatar says when the button is hovered on the Contact page.
   socials: [
-    { label: "Instagram", url: "#" },
-    { label: "GitHub", url: "#" },
-    { label: "Hugging Face", url: "#" },
-    { label: "LinkedIn", url: "#" },
+    { label: "Instagram", url: "#", icon: "camera", line: "Photos and stories!" },
+    { label: "GitHub", url: "#", icon: "terminal", line: "That's where my code lives." },
+    { label: "Hugging Face", url: "#", icon: "robot", line: "My AI experiments!" },
+    { label: "LinkedIn", url: "#", icon: "briefcase", line: "The serious me." },
   ],
 };

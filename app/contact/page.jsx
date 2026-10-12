@@ -1,6 +1,7 @@
 import CopyEmail from "@/components/CopyEmail";
 import EmailLink from "@/components/EmailLink";
 import StatusBadge from "@/components/StatusBadge";
+import SocialLinks from "@/components/SocialLinks";
 import { ContactAvatar, JakartaClock } from "@/components/JakartaTime";
 import { site } from "@/data/site";
 
@@ -27,18 +28,7 @@ export default function ContactPage() {
           <li>
             <CopyEmail />
           </li>
-          {site.socials.map((s) => (
-            <li key={s.label}>
-              <a
-                href={s.url}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block rounded-full border border-ink/25 px-5 py-2.5 text-[15px] font-medium transition-colors hover:border-ink"
-              >
-                {s.label}
-              </a>
-            </li>
-          ))}
+          <SocialLinks />
         </ul>
         <JakartaClock className="enter mt-10" style={{ "--i": 4 }} />
       </div>

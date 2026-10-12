@@ -2,6 +2,8 @@
 
 import { useRef, useState } from "react";
 import { site } from "@/data/site";
+import PixelIcon from "./PixelIcon";
+import { lookAtMe, lookAway } from "./SocialLinks";
 
 // Copies the email address, shows a small "Copied!" box, and the avatar gives a thumbs up.
 // It reads the address itself (not as a prop from the page), so the address
@@ -11,7 +13,8 @@ export default function CopyEmail({ className = "" }) {
   const [copied, setCopied] = useState(false);
   const timer = useRef(0);
 
-  const copy = async () => {
+  const copy = async (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
     let ok = false;
     try {
       await navigator.clipboard.writeText(email);
@@ -35,6 +38,7 @@ export default function CopyEmail({ className = "" }) {
     clearTimeout(timer.current);
     timer.current = setTimeout(() => setCopied(false), 1800);
     window.dispatchEvent(new CustomEvent("avatar:react", { detail: { reaction: "thumbs", line: "Got it. Talk soon!" } }));
+    window.dispatchEvent(new CustomEvent("mail:send", { detail: { x: r.left + r.width / 2, y: r.top + r.height / 2 } }));
   };
 
   return (
@@ -42,8 +46,11 @@ export default function CopyEmail({ className = "" }) {
       <button
         type="button"
         onClick={copy}
-        className="rounded-full border border-ink/25 px-5 py-2.5 text-[15px] font-medium transition-colors hover:border-ink"
+        onPointerEnter={(e) => e.pointerType === "mouse" && lookAtMe(e, "Copy it, I won't mind.")}
+        onPointerLeave={lookAway}
+        className="group inline-flex items-center gap-1.5 rounded-full border border-ink/25 py-2.5 pl-3.5 pr-4 text-[15px] font-medium transition-colors hover:border-ink"
       >
+        <PixelIcon name="envelope" className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5" />
         {copied ? "Copied" : "Copy email"}
       </button>
       {copied && (

@@ -52,6 +52,8 @@ Intro dan halaman Work menyesuaikan sendiri dengan jumlah project. Di intro, sat
 | Ganti ke light mode | Silau, menutup mata pakai tangan |
 | Meng-copy teks di halaman | Nyeletuk "Copying my homework?" |
 | Klik "Copy email" (Contact) | Kasih jempol sambil kedip |
+| Hover tombol email atau sosmed (Contact) | Nengok ke tombolnya sambil nyeletuk. Kalimatnya diatur di `line` pada `socials` di `data/site.js` |
+| Klik email atau "Copy email" (Contact) | Surat pixel terbang ke kotak pos di sebelah avatar, benderanya naik, ada bunyi "ding-dong" |
 | Buka Contact saat malam di Jakarta (22.00–07.00 WIB) | Tidur dengan "zZz". Tap untuk membangunkan sebentar |
 | Scroll halaman yang panjang | Versi mini-nya jalan di progress bar di atas layar |
 | Nyasar ke halaman yang tidak ada (404) | Garuk-garuk kepala kebingungan |

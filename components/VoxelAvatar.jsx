@@ -154,11 +154,19 @@ export default function VoxelAvatar({
         }
       }
 
-      // A line when a project starts being hovered (not every time).
-      if (interactive && shared.lookAt && !state.looking && t - (state.lastLookLine || 0) > 4) {
-        say(pick(LINES.look));
-        state.lastLookLine = t;
+      // A line when something starts being hovered. A custom line (Contact page
+      // buttons) is said whenever it changes; the generic project line at most every 4 s.
+      const lookLine = shared.lookAt?.line || null;
+      if (interactive && shared.lookAt) {
+        if (lookLine && lookLine !== state.lastLookText) {
+          say(state.sleeping ? `zZz... ${lookLine}` : lookLine); // talks in his sleep
+          state.lastLookText = lookLine;
+        } else if (!lookLine && !state.sleeping && !state.looking && t - (state.lastLookLine || 0) > 4) {
+          say(pick(LINES.look));
+          state.lastLookLine = t;
+        }
       }
+      if (!shared.lookAt) state.lastLookText = null;
       state.looking = !!shared.lookAt;
 
       // Where to look: a hovered project, otherwise the pointer.

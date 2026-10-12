@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
+import { lookAtMe, lookAway } from "./SocialLinks";
 
 // The email link is added by the browser after the page loads, so the address
 // isn't in the page's HTML, where simple spam bots look for addresses.
@@ -18,7 +19,17 @@ export default function EmailLink({ className = "" }) {
     );
   }
   return (
-    <a href={`mailto:${email}`} className={className}>
+    <a
+      href={`mailto:${email}`}
+      className={className}
+      onPointerEnter={(e) => e.pointerType === "mouse" && lookAtMe(e, "Write me something!")}
+      onPointerLeave={lookAway}
+      onClick={(e) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        window.dispatchEvent(new CustomEvent("mail:send", { detail: { x: r.left + Math.min(r.width / 2, 120), y: r.top + r.height / 2 } }));
+        window.dispatchEvent(new CustomEvent("avatar:react", { detail: { reaction: "thumbs", line: "Can't wait to read it!" } }));
+      }}
+    >
       {email}
     </a>
   );
