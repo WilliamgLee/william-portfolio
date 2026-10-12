@@ -63,15 +63,15 @@ export const site = {
   // however many projects are listed here.
   projects: [
     {
-      title: "Bingo Math",
-      hook: "Math class, turned into a game show.",
+      title: "Bingolah",
+      hook: "Any class, turned into a game show.",
       pitch:
-        "Turn any math lesson into a game show. Bingo Math puts up to five teams against the clock across 35 questions, from easy addition to triple-hard permutations. Solve it, claim the tile, and line up four for a 50-point BINGO.",
+        "A bingo quiz for the whole class: seven subjects, five levels, up to five teams racing to line up four tiles.",
       description:
-        "A classroom quiz game for 2 to 5 teams on one screen. Seven topics from addition to nCr and nPr, five difficulty levels, a timer on every question, and Digit, a calculator mascot who cheers every team on.",
-      image: "/img/foto1.jpg",
-      url: "/projects/bingo-math.html",
-      cta: "Play Bingo Math",
+        "A classroom quiz game for 2 to 5 teams on one screen. Seven subjects: Math, Indonesian History, Biology, Physics and Chemistry for grade 12 (Kurikulum Merdeka), plus AI and IT. Over 300 multiple-choice questions, calculation questions with fresh random numbers every time, and Digit, a calculator mascot who cheers every team on.",
+      image: "/img/bingolah.jpg",
+      url: "/projects/bingolah.html",
+      cta: "Play Bingolah",
     },
     {
       title: "Loop Quest",

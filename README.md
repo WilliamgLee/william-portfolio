@@ -23,7 +23,7 @@ Buka http://localhost:3000
 | Foto project | `public/img/foto1.jpg` (dan seterusnya) |
 | Foto profil (belum dipakai di situs) | `public/img/fotoprofil.jpg` |
 | Musik intro (tempo, akor, drum) | `lib/intro-music.js` |
-| Game Bingo Math | `public/projects/bingo-math.html` |
+| Game Bingolah (dulu Bingo Math) | `public/projects/bingolah.html`, bank soalnya di `public/projects/bingolah-soal.js` |
 | Badge "Open to internships" | `status` di `data/site.js` (isi `""` untuk menyembunyikan) |
 | Gambar preview saat link dibagikan | `app/opengraph-image.png` dan `app/twitter-image.png` (1200×630) |
 

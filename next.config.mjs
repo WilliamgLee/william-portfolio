@@ -1,5 +1,5 @@
 // Security settings. These headers are sent with every page and every file
-// the site serves, including /projects/bingo-math.html.
+// the site serves, including /projects/bingolah.html.
 
 const isDev = process.env.NODE_ENV !== "production";
 
