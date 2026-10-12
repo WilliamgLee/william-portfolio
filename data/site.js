@@ -74,6 +74,17 @@ export const site = {
       cta: "Play Bingo Math",
     },
     {
+      title: "Loop Quest",
+      hook: "Watch your C loops come alive.",
+      pitch:
+        "Type a C loop and watch it run, one step at a time, as a tiny pixel game with chiptune sound.",
+      description:
+        "A step-by-step C loop visualizer. Every trip through a loop becomes a tile, nested loops get their own platform, and each step is explained in plain words. It runs on a small C interpreter I wrote in JavaScript, checked against GCC.",
+      image: "/img/loop-quest.jpg",
+      url: "/projects/loop-quest.html",
+      cta: "Play Loop Quest",
+    },
+    {
       title: "100 C Problems",
       hook: "A hundred ways to practice C.",
       pitch:
