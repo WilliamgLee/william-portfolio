@@ -59,15 +59,16 @@ const nextConfig = {
         source: "/projects/happy-birthday.html",
         headers: [{ key: "Content-Security-Policy", value: birthdayPolicy }],
       },
-      // The private birthday surprise in /kado has a photo booth, so only pages
-      // in that folder may ask for the camera (still no microphone, location, etc.).
+      // The private birthday surprise in /kado has a photo booth and blow-out-the-
+      // candles, so only pages in that folder may ask for the camera and microphone
+      // (still no location, payment, etc.).
       // It is a secret link: search engines are asked not to list it.
       {
         source: "/kado/:path*",
         headers: [
           {
             key: "Permissions-Policy",
-            value: "camera=(self), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()",
+            value: "camera=(self), microphone=(self), geolocation=(), payment=(), usb=(), browsing-topics=()",
           },
           { key: "X-Robots-Tag", value: "noindex, nofollow" },
         ],
