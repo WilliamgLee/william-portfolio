@@ -3,11 +3,11 @@
 
 export const site = {
   name: "William Lee",
-  tagline: "AI Tinkerer · Frontend Engineer · Indonesia",
+  tagline: "Student · AI Tinkerer · Indonesia",
   intro:
     "I build interfaces for the web, then spend the rest of my time poking at AI models to see what they can actually do.",
   description:
-    "William Lee is a frontend engineer from Indonesia who tinkers with AI. Selected work, skills and contact.",
+    "William Lee is a student from Indonesia who tinkers with AI. Selected work, skills and contact.",
 
   // Your site's address once it's online, e.g. "https://williamlee.my.id".
   // Link previews (WhatsApp, LinkedIn, X) need it to find the preview image.
@@ -17,7 +17,7 @@ export const site = {
     // Shown large, like a pull quote.
     lead: "I like building small things that feel finished.",
     body:
-      "I'm a frontend engineer and a student at Binus. I'd rather finish one small project properly than start ten big ones: the sound when a button is pressed, the animation that makes a page feel alive, a layout that still works on a cheap phone. Those details are where I spend my time. I also use AI tools like Claude and Gemini every day, and I like finding out what they can really do. That's how things like Bingolah, a classroom quiz game, and Loop Quest, a pixel game that explains C loops, came to be.",
+      "I'm a student at Binus who likes to tinker with AI and turn ideas into things people can use. I'd rather finish one small project properly than start ten big ones: the sound when a button is pressed, the animation that makes a page feel alive, a layout that still works on a cheap phone. I use AI tools like Claude and Gemini every day, and I like finding out what they can really do. That's how Bingolah, a classroom quiz game, and Loop Quest, a pixel game that explains C loops, came to be.",
   },
 
   skills: [

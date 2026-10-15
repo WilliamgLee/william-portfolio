@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "About",
-  description: `About ${site.name}, a frontend engineer from Indonesia who tinkers with AI.`,
+  description: `About ${site.name}, a student from Indonesia who tinkers with AI.`,
 };
 
 export default function AboutPage() {
