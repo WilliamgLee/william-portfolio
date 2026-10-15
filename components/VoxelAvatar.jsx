@@ -133,6 +133,10 @@ export default function VoxelAvatar({
       reduceMotion,
     };
     stateRef.current = state;
+    // A new page means a fresh start: forget anything the last page asked him
+    // to look at. (A hovered project card that you click disappears without
+    // ever saying "stop looking", which left his head stuck on that spot.)
+    if (interactive) shared.lookAt = null;
     const assembleStart = assemble && !reduceMotion ? now() : null;
     const look = { x: 0, y: 0 };
     let nextBlink = now() + 2 + Math.random() * 2;
