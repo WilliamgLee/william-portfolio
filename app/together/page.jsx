@@ -2,11 +2,13 @@ import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import ProjectList from "@/components/ProjectList";
 import { site } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Built with friends",
   description: `Projects ${site.name} made with friends, and where to find their work.`,
-};
+  path: "/together",
+});
 
 export default function TogetherPage() {
   const { projects, friends } = site.together;

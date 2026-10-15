@@ -1,23 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { site } from "@/data/site";
 import { lookAtMe, lookAway } from "./SocialLinks";
 
-// The email link is added by the browser after the page loads, so the address
-// isn't in the page's HTML, where simple spam bots look for addresses.
-// Until then, an empty space of the same height keeps the layout steady.
+// The email address as a visible mailto: link. It's in the page's HTML from
+// the start, so it shows up even before JavaScript loads and search engines
+// and screen readers can read it. (This used to be added only after load, to
+// hide it from spam bots; a visible address was judged more useful.)
 export default function EmailLink({ className = "" }) {
-  const [email, setEmail] = useState(null);
-  useEffect(() => setEmail(site.contact.email), []);
-
-  if (!email) {
-    return (
-      <span className={className} aria-hidden="true">
-        &nbsp;
-      </span>
-    );
-  }
+  const email = site.contact.email;
   return (
     <a
       href={`mailto:${email}`}

@@ -14,11 +14,23 @@ const silkscreen = Silkscreen({ subsets: ["latin"], weight: "400", variable: "--
 // The share preview image is app/opengraph-image.png (and twitter-image.png);
 // Next.js adds it to every page automatically.
 export const metadata = {
-  metadataBase: site.url ? new URL(site.url) : undefined,
+  // Turns relative URLs (canonical links, og:url, the share image) into full ones.
+  metadataBase: new URL("https://william-lee.dev"),
   title: { default: site.name, template: `%s · ${site.name}` },
   description: site.description,
-  openGraph: { title: site.name, description: site.description, siteName: site.name, type: "website" },
+  openGraph: { title: site.name, description: site.description, siteName: site.name, type: "website", locale: "en_US" },
   twitter: { card: "summary_large_image", title: site.name, description: site.description },
+};
+
+// Structured data for search engines: tells Google this site is about a person,
+// and which profiles elsewhere are the same person (shown in search results).
+const sameAs = site.socials.filter((s) => ["GitHub", "LinkedIn"].includes(s.label)).map((s) => s.url);
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  url: "https://william-lee.dev",
+  sameAs,
 };
 
 // Runs before the page paints: applies the saved theme, and decides whether
@@ -47,6 +59,11 @@ export default function RootLayout({ children }) {
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: bootScript }} />
+        <script
+          type="application/ld+json"
+          // "<" is escaped so text in the data can never close the script tag early.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }}
+        />
       </head>
       <body>
         <SiteShell>{children}</SiteShell>

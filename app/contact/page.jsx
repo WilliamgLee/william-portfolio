@@ -3,11 +3,13 @@ import EmailLink from "@/components/EmailLink";
 import SocialLinks from "@/components/SocialLinks";
 import { ContactAvatar, JakartaClock } from "@/components/JakartaTime";
 import { site } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Contact",
-  description: `How to reach ${site.name}.`,
-};
+  description: `How to reach ${site.name}: email, GitHub, LinkedIn and Instagram.`,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

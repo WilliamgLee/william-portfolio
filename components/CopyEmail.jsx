@@ -6,8 +6,8 @@ import PixelIcon from "./PixelIcon";
 import { lookAtMe, lookAway } from "./SocialLinks";
 
 // Copies the email address, shows a small "Copied!" box, and the avatar gives a thumbs up.
-// It reads the address itself (not as a prop from the page), so the address
-// never ends up in the page's HTML. See EmailLink.jsx.
+// It reads the address from data/site.js. The visible mailto: link next to
+// it is EmailLink.jsx.
 export default function CopyEmail({ className = "" }) {
   const email = site.contact.email;
   const [copied, setCopied] = useState(false);

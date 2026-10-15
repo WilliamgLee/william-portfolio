@@ -1,7 +1,16 @@
 import Link from "next/link";
+import FeaturedWork from "@/components/FeaturedWork";
 import Figure, { BLOCK_COUNT } from "@/components/Figure";
 import Intro from "@/components/Intro";
 import { site } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
+
+export const metadata = pageMeta({
+  title: `${site.name} · Student & AI Tinkerer`,
+  absoluteTitle: true,
+  description: site.description,
+  path: "/",
+});
 
 export default function HomePage() {
   const [first, last] = site.name.split(" ");
@@ -52,6 +61,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <FeaturedWork />
     </>
   );
 }

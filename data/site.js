@@ -19,7 +19,7 @@ export const site = {
     // One string per paragraph. [text](/path) becomes a link.
     body: [
       "I'm William, a first year computer science student at Binus. My first \"project\" wasn't code: in high school I ran a YouTube Shorts channel to earn money without losing study time. It made its first $7, then died from copyright claims because I never set clear rules for the friend I hired to help. That taught me more than the $7 did: systems break where the rules are unwritten.",
-      "That idea shows up in everything I build now. [Kiki Classroom](/work/kiki-classroom) is my second attempt at kids' videos, rebuilt as six local AI agents with written rules, automated checks, and me approving every video. [Loop Quest](/projects/loop-quest.html) came from seeing people around me, myself included, struggle with C loops, so I wrote a small C interpreter in JavaScript to make each loop visible step by step. [Bingolah](/projects/bingolah.html) turns a classroom quiz into a game show, because learning sticks better when it's loud.",
+      "That idea shows up in everything I build now. [Kiki Classroom](/work/kiki-classroom) is my second attempt at kids' videos, rebuilt as six local AI agents with written rules, automated checks, and me approving every video. [Loop Quest](/work/loop-quest) came from seeing people around me, myself included, struggle with C loops, so I wrote a small C interpreter in JavaScript to make each loop visible step by step. [Bingolah](/projects/bingolah.html) turns a classroom quiz into a game show, because learning sticks better when it's loud.",
       "I care about details people feel but rarely notice: a button sound, an animation that makes a page feel alive, a layout that works on a cheap phone. I use AI like Claude and Gemini daily, but I want to understand what my code actually does.",
       "[Right now I'm still finding new ideas, and I'm open to collaboration!](/contact)",
     ],
@@ -123,8 +123,9 @@ export const site = {
         "C loops are hard to picture, so I made them visible. Every iteration becomes a tile, nested loops get their own platform, and each step is explained in plain words. Under the hood is a small C interpreter I wrote in JavaScript, checked against GCC.",
       tags: ["JavaScript", "C", "Interpreter"],
       image: "/img/loop-quest.jpg",
-      url: "/projects/loop-quest.html",
-      cta: "Play Loop Quest",
+      url: "/work/loop-quest",
+      cta: "Read the story",
+      links: [{ label: "Play Loop Quest", url: "/projects/loop-quest.html" }],
     },
   ],
 

@@ -1,10 +1,12 @@
 import PageHeader from "@/components/PageHeader";
 import { site } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Skill",
   description: `What ${site.name} works with: JavaScript, React and Next.js, Tailwind CSS, local LLM pipelines with Python and Ollama, and more.`,
-};
+  path: "/skill",
+});
 
 export default function SkillPage() {
   return (

@@ -2,11 +2,13 @@ import PageHeader from "@/components/PageHeader";
 import ProjectList from "@/components/ProjectList";
 import Link from "next/link";
 import { site } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Work",
-  description: `Selected projects by ${site.name}.`,
-};
+  description: `Projects by ${site.name}: Kiki Classroom, a local AI pipeline for kids' videos; Bingolah, a classroom quiz game; and Loop Quest, a C loop visualizer.`,
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (

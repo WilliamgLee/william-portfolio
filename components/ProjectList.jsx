@@ -1,14 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import HoverLook from "@/components/HoverLook";
-
-// Links starting with "/" and not ending in a file (.html, .pdf) are pages of this
-// site, so they open in the same tab; everything else opens in a new tab.
-const isPage = (url) => url.startsWith("/") && !/\.[a-z]+$/i.test(url);
-function SmartLink({ href, children, ...rest }) {
-  if (isPage(href)) return <Link href={href} {...rest}>{children}</Link>;
-  return <a href={href} target="_blank" rel="noreferrer" {...rest}>{children}</a>;
-}
+import SmartLink from "@/components/SmartLink";
+import TechTags from "@/components/TechTags";
 
 // Alternating project rows (image + text). Used on Work and on the friends page.
 export default function ProjectList({ projects }) {
@@ -49,15 +42,7 @@ export default function ProjectList({ projects }) {
                 {project.hook}
               </p>
               <p className="mt-4 max-w-[44ch] text-muted">{project.description}</p>
-              {project.tags?.length > 0 && (
-                <ul className="mt-4 flex flex-wrap gap-2" aria-label="Built with">
-                  {project.tags.map((tag) => (
-                    <li key={tag} className="rounded-full border border-rule px-2.5 py-0.5 text-[13px] text-muted">
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <TechTags tags={project.tags} />
               <div className="mt-6 flex flex-wrap gap-3">
                 <SmartLink
                   href={project.url}

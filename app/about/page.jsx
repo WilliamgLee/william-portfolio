@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Figure from "@/components/Figure";
 import { site } from "@/data/site";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "About",
-  description: `About ${site.name}, a student from Indonesia who tinkers with AI.`,
-};
+  description: `${site.name} is a first-year computer science student at Binus who builds with AI and wants to understand what his code actually does.`,
+  path: "/about",
+});
 
 // Turns "[text](/path)" inside a paragraph into a link. Pages of this site
 // open in the same tab; files like /projects/x.html open in a new tab.
