@@ -1,6 +1,5 @@
 import CopyEmail from "@/components/CopyEmail";
 import EmailLink from "@/components/EmailLink";
-import StatusBadge from "@/components/StatusBadge";
 import SocialLinks from "@/components/SocialLinks";
 import { ContactAvatar, JakartaClock } from "@/components/JakartaTime";
 import { site } from "@/data/site";
@@ -14,7 +13,6 @@ export default function ContactPage() {
   return (
     <section className="mx-auto grid max-w-6xl gap-10 px-5 pt-10 sm:px-8 md:grid-cols-12 md:items-end md:pt-20">
       <div className="md:col-span-8">
-        <StatusBadge className="enter mb-6" />
         <h1 className="enter font-serif text-[clamp(3rem,8vw,6.5rem)] leading-[0.95] tracking-[-0.03em]">
           {site.contact.heading}
         </h1>

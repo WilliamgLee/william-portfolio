@@ -134,15 +134,6 @@ html[data-intro="skip"] .intro {
   transform-origin: 50% 100%;
 }
 
-/* "Open to internships": a small square light that blinks like an LED */
-.status-light {
-  background: #4f8a5b;
-  animation: status-blink 1.6s steps(1) infinite;
-}
-@keyframes status-blink {
-  50% { opacity: 0.35; }
-}
-
 /* Sleeping avatar: little z's float up and fade */
 @keyframes zzz {
   0% { opacity: 0; transform: translate(0, 0); }

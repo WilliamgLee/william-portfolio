@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Figure, { BLOCK_COUNT } from "@/components/Figure";
 import Intro from "@/components/Intro";
-import StatusBadge from "@/components/StatusBadge";
 import { site } from "@/data/site";
 
 export default function HomePage() {
@@ -22,7 +21,6 @@ export default function HomePage() {
         </div>
 
         <div className="hero-copy md:col-span-7 md:pl-6">
-          <StatusBadge className="enter mb-7" style={{ "--i": 0 }} />
           {/* Phones: one line. Larger screens: two staggered lines. */}
           <h1 className="whitespace-nowrap font-serif text-[clamp(2.75rem,15vw,5rem)] font-normal leading-[0.86] tracking-[-0.035em] md:whitespace-normal md:text-[clamp(4rem,11vw,9.5rem)]">
             <span className="enter inline-block md:block" style={{ "--i": 0 }}>

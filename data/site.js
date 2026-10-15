@@ -4,8 +4,6 @@
 export const site = {
   name: "William Lee",
   tagline: "AI Tinkerer · Frontend Engineer · Indonesia",
-  // Shown as a badge on Home and Contact. Set to "" to hide it.
-  status: "Open to internships",
   intro:
     "I build interfaces for the web, then spend the rest of my time poking at AI models to see what they can actually do.",
   description:
@@ -14,9 +12,6 @@ export const site = {
   // Your site's address once it's online, e.g. "https://williamlee.my.id".
   // Link previews (WhatsApp, LinkedIn, X) need it to find the preview image.
   url: "https://william-lee.dev",
-
-  // Profile photo (not used on the site yet; the link preview uses app/opengraph-image.png).
-  profilePhoto: "/img/fotoprofil.jpg",
 
   about: {
     // Shown large, like a pull quote.
