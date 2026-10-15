@@ -16,8 +16,13 @@ export const site = {
   about: {
     // Shown large, like a pull quote.
     lead: "I like building small things that feel finished.",
-    body:
-      "I'm a student at Binus who likes to tinker with AI and turn ideas into things people can use. I'd rather finish one small project properly than start ten big ones: the sound when a button is pressed, the animation that makes a page feel alive, a layout that still works on a cheap phone. I use AI tools like Claude and Gemini every day, and I like finding out what they can really do. That's how Bingolah, a classroom quiz game, and Loop Quest, a pixel game that explains C loops, came to be.",
+    // One string per paragraph. [text](/path) becomes a link.
+    body: [
+      "I'm William, a first year computer science student at Binus. My first \"project\" wasn't code: in high school I ran a YouTube Shorts channel to earn money without losing study time. It made its first $7, then died from copyright claims because I never set clear rules for the friend I hired to help. That taught me more than the $7 did: systems break where the rules are unwritten.",
+      "That idea shows up in everything I build now. [Kiki Classroom](/work/kiki-classroom) is my second attempt at kids' videos, rebuilt as six local AI agents with written rules, automated checks, and me approving every video. [Loop Quest](/projects/loop-quest.html) came from seeing people around me, myself included, struggle with C loops, so I wrote a small C interpreter in JavaScript to make each loop visible step by step. [Bingolah](/projects/bingolah.html) turns a classroom quiz into a game show, because learning sticks better when it's loud.",
+      "I care about details people feel but rarely notice: a button sound, an animation that makes a page feel alive, a layout that works on a cheap phone. I use AI like Claude and Gemini daily, but I want to understand what my code actually does.",
+      "[Right now I'm still finding new ideas, and I'm open to collaboration!](/contact)",
+    ],
   },
 
   skills: [
@@ -52,6 +57,7 @@ export const site = {
   // hook: one punchy line, shown big on the Work page.
   // pitch: 2–3 sentences of marketing, typed out in the intro.
   // description: what it is, shown on the Work page.
+  // tags: tech used, shown as small pills under the description.
   //
   // To add a project, copy the block below, fill it in, and put its preview
   // image in public/img (e.g. foto2.jpg). The intro and Work page adapt to
@@ -66,6 +72,7 @@ export const site = {
         "Six AI staff in a pixel-art office turn a topic into a 30-second learning video for toddlers, with me approving every script and every video.",
       description:
         "A local pipeline of six AI agents: a scriptwriter, a child-safety advisor, a voice, an animator, an editor and a delivery desk, all running on one laptop GPU. Every frame and every note is made by code, nothing borrowed, and a person has the last word.",
+      tags: ["Python", "Ollama", "Qwen2.5", "XTTS-v2", "ffmpeg"],
       image: "/img/kiki-classroom.jpg",
       url: "/work/kiki-classroom",
       cta: "Read the story",
@@ -80,7 +87,8 @@ export const site = {
       pitch:
         "A bingo quiz for the whole class: seven subjects, five levels, up to five teams racing to line up four tiles.",
       description:
-        "A classroom quiz game for 2 to 5 teams on one screen. Seven subjects: Math, Indonesian History, Biology, Physics and Chemistry for grade 12 (Kurikulum Merdeka), plus AI and IT. Over 300 multiple-choice questions, calculation questions with fresh random numbers every time, and Digit, a calculator mascot who cheers every team on.",
+        "A quiz game for 2–5 teams sharing one screen, built for real classrooms. 300+ questions across seven subjects (grade 12 Kurikulum Merdeka, plus AI and IT). Math questions get fresh random numbers every round, so nobody can memorise answers. Digit, a calculator mascot, cheers every team on.",
+      tags: ["HTML", "CSS", "JavaScript", "Web Audio"],
       image: "/img/bingolah.jpg",
       url: "/projects/bingolah.html",
       cta: "Play Bingolah",
@@ -91,22 +99,11 @@ export const site = {
       pitch:
         "Type a C loop and watch it run, one step at a time, as a tiny pixel game with chiptune sound.",
       description:
-        "A step-by-step C loop visualizer. Every trip through a loop becomes a tile, nested loops get their own platform, and each step is explained in plain words. It runs on a small C interpreter I wrote in JavaScript, checked against GCC.",
+        "C loops are hard to picture, so I made them visible. Every iteration becomes a tile, nested loops get their own platform, and each step is explained in plain words. Under the hood is a small C interpreter I wrote in JavaScript, checked against GCC.",
+      tags: ["JavaScript", "C", "Interpreter"],
       image: "/img/loop-quest.jpg",
       url: "/projects/loop-quest.html",
       cta: "Play Loop Quest",
-    },
-    {
-      title: "Pixel Birthday",
-      intro: false, // shown on Work, left out of the opening intro
-      hook: "A birthday card you can play.",
-      pitch:
-        "A birthday surprise built like a tiny video game. Two pixel avatars meet at a cake, four gifts wait to be opened, and every gift unlocks a message. Open them all, then blow out the candles.",
-      description:
-        "An interactive pixel-art birthday card on a single canvas. Original chiptune music made with the Web Audio API, RPG-style dialog boxes, an item-collected animation, and layouts tuned for phones in portrait and landscape.",
-      image: "/img/ultah.jpg",
-      url: "/projects/happy-birthday.html",
-      cta: "Open the surprise",
     },
   ],
 

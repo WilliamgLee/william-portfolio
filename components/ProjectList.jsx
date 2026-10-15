@@ -49,6 +49,15 @@ export default function ProjectList({ projects }) {
                 {project.hook}
               </p>
               <p className="mt-4 max-w-[44ch] text-muted">{project.description}</p>
+              {project.tags?.length > 0 && (
+                <ul className="mt-4 flex flex-wrap gap-2" aria-label="Built with">
+                  {project.tags.map((tag) => (
+                    <li key={tag} className="rounded-full border border-rule px-2.5 py-0.5 text-[13px] text-muted">
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <div className="mt-6 flex flex-wrap gap-3">
                 <SmartLink
                   href={project.url}
