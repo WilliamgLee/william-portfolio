@@ -80,17 +80,6 @@ export const site = {
       cta: "Play Loop Quest",
     },
     {
-      title: "100 C Problems",
-      hook: "A hundred ways to practice C.",
-      pitch:
-        "A hundred Online Judge problems for learning C, from the first printf to nested loops. Every solution compiled, tested, and explained.",
-      description:
-        "A 99-page practice book in Indonesian: input/output, selection, operators, and loops. Each problem has a clear statement, constraints, and sample tests, with tested solutions and short explanations at the back.",
-      image: "/img/soal-c.jpg",
-      url: "/projects/100-soal-pemrograman-c.pdf",
-      cta: "Open the PDF",
-    },
-    {
       title: "Pixel Birthday",
       hook: "A birthday card you can play.",
       pitch:
@@ -102,6 +91,27 @@ export const site = {
       cta: "Open the surprise",
     },
   ],
+
+  // The "Built with friends" page (/together), opened from a button on Work.
+  // Projects use the same fields as above; friends are links to their sites.
+  together: {
+    projects: [
+      {
+        title: "100 C Problems",
+        hook: "A hundred ways to practice C.",
+        pitch:
+          "A hundred Online Judge problems for learning C, from the first printf to nested loops. Every solution compiled, tested, and explained.",
+        description:
+          "A 99-page practice book in Indonesian: input/output, selection, operators, and loops. Each problem has a clear statement, constraints, and sample tests, with tested solutions and short explanations at the back.",
+        image: "/img/soal-c.jpg",
+        url: "/projects/100-soal-pemrograman-c.pdf",
+        cta: "Open the PDF",
+      },
+    ],
+    friends: [
+      { name: "jomontolalu.com", url: "https://jomontolalu.com", line: "My friend's website." },
+    ],
+  },
 
   contact: {
     heading: "Have something in mind?",
