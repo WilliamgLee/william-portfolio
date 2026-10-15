@@ -17,7 +17,7 @@ export const site = {
     // Shown large, like a pull quote.
     lead: "I like building small things that feel finished.",
     body:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum, nullam quis risus eget urna mollis ornare vel eu leo.",
+      "I'm a frontend engineer and a student at Binus. I'd rather finish one small project properly than start ten big ones: the sound when a button is pressed, the animation that makes a page feel alive, a layout that still works on a cheap phone. Those details are where I spend my time. I also use AI tools like Claude and Gemini every day, and I like finding out what they can really do. That's how things like Bingolah, a classroom quiz game, and Loop Quest, a pixel game that explains C loops, came to be.",
   },
 
   skills: [
