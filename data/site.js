@@ -58,6 +58,22 @@ export const site = {
   // however many projects are listed here.
   projects: [
     {
+      title: "Kiki Classroom",
+      badge: "BIGGEST",
+      hook: "A tiny AI office that makes videos for kids.",
+      pitch:
+        "Six AI staff in a pixel-art office turn a topic into a 30-second learning video for toddlers, with me approving every script and every video.",
+      description:
+        "A local pipeline of six AI agents: a scriptwriter, a child-safety advisor, a voice, an animator, an editor and a delivery desk, all running on one laptop GPU. Every frame and every note is made by code, nothing borrowed, and a person has the last word.",
+      image: "/img/kiki-classroom.jpg",
+      url: "/work/kiki-classroom",
+      cta: "Read the story",
+      links: [
+        { label: "Watch the demo", url: "https://youtu.be/0EmKHYFijgc" },
+        { label: "GitHub", url: "https://github.com/WilliamgLee/newIdea" },
+      ],
+    },
+    {
       title: "Bingolah",
       hook: "Any class, turned into a game show.",
       pitch:
