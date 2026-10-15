@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "Skill",
-  description: `What ${site.name} works with: Tailwind CSS, JavaScript, Claude, Gemini and Minecraft Bedrock modding.`,
+  description: `What ${site.name} works with: JavaScript, React and Next.js, Tailwind CSS, local LLM pipelines with Python and Ollama, and more.`,
 };
 
 export default function SkillPage() {

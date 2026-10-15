@@ -25,32 +25,53 @@ export const site = {
     ],
   },
 
+  // Each skill points at a project that proves it. wide: spans both columns.
   skills: [
     {
-      group: "frontend",
-      title: "Tailwind CSS",
-      description: "Layouts that hold up from a phone to a wide monitor, without a pile of custom CSS.",
-    },
-    {
-      group: "frontend",
+      group: "web",
       title: "JavaScript",
-      description: "Interactive pieces of the page: menus, motion, small tools that run in the browser.",
+      description: "The language behind Bingolah and Loop Quest, including the small C interpreter that powers Loop Quest's step-by-step view.",
     },
     {
-      group: "ai tools",
-      title: "Claude",
-      description: "Planning, writing and building with an AI pair, from first idea to working code.",
+      group: "web",
+      title: "React & Next.js",
+      description: "This site: App Router pages, shared components, and all content kept in one data file so updates don't touch the layout.",
     },
     {
-      group: "ai tools",
-      title: "Gemini",
-      description: "Testing prompts and ideas across models to find what each one is good at.",
+      group: "web",
+      title: "Tailwind CSS",
+      description: "Layouts that hold up from a cheap phone to a wide monitor, without a pile of custom CSS.",
+    },
+    {
+      group: "web",
+      title: "Canvas & Web Audio",
+      description: "The blocky mascot on this site is drawn by my own pixel renderer, and the chiptune music and button sounds in my projects are generated in code.",
+    },
+    {
+      group: "ai",
+      title: "Local LLM pipelines",
+      description: "Kiki Classroom: six agents on Python, Ollama and Qwen2.5, with strict JSON outputs checked by code, a fact dictionary, and 268 automated tests.",
+    },
+    {
+      group: "ai",
+      title: "AI-assisted development",
+      description: "I build with Claude and Gemini every day, but I read and test what they write. I'd rather understand my code than just ship it.",
+    },
+    {
+      group: "tools",
+      title: "Git, GitHub & Vercel",
+      description: "Every project is versioned on GitHub, and this site deploys to Vercel automatically on every push.",
+      wide: true,
+    },
+    {
+      group: "learning",
+      title: "C",
+      description: "First-year coursework. Building Loop Quest and practising with 100 C problems is how I'm getting comfortable with loops and arrays.",
     },
     {
       group: "modding",
-      title: "Minecraft Bedrock modding",
-      description: "Add-ons with custom blocks, items and behaviour. Where the blocky avatar on this site comes from.",
-      wide: true,
+      title: "Minecraft Bedrock add-ons",
+      description: "Custom blocks, items and behaviour. It's where the blocky avatar on this site comes from.",
     },
   ],
 
