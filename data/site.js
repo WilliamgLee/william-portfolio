@@ -55,7 +55,8 @@ export const site = {
   //
   // To add a project, copy the block below, fill it in, and put its preview
   // image in public/img (e.g. foto2.jpg). The intro and Work page adapt to
-  // however many projects are listed here.
+  // however many projects are listed here. Add `intro: false` to keep a
+  // project on Work but out of the opening intro.
   projects: [
     {
       title: "Kiki Classroom",
@@ -97,6 +98,7 @@ export const site = {
     },
     {
       title: "Pixel Birthday",
+      intro: false, // shown on Work, left out of the opening intro
       hook: "A birthday card you can play.",
       pitch:
         "A birthday surprise built like a tiny video game. Two pixel avatars meet at a cake, four gifts wait to be opened, and every gift unlocks a message. Open them all, then blow out the candles.",

@@ -12,8 +12,10 @@ const BLOCKS = countBlocks(buildModel(avatarConfig));
 // Timeline in BEATS (80 BPM, 1 beat = 0.75 s), matched to lib/intro-music.js.
 // One bar (4 beats, 3 s) per project; a single project gets two bars.
 // 1 project: 2 bars. 2 projects: 1.5 bars each, so the pitch can still be read. 3+: 1 bar each.
-const BEATS_PER_PROJECT = site.projects.length === 1 ? 8 : site.projects.length === 2 ? 6 : 4;
-const HANDOVER = 8 + site.projects.length * BEATS_PER_PROJECT;
+// Projects marked intro: false in data/site.js stay on Work but skip the intro.
+const INTRO_PROJECTS = site.projects.filter((p) => p.intro !== false);
+const BEATS_PER_PROJECT = INTRO_PROJECTS.length === 1 ? 8 : INTRO_PROJECTS.length === 2 ? 6 : 4;
+const HANDOVER = 8 + INTRO_PROJECTS.length * BEATS_PER_PROJECT;
 const STEPS = { hi: 0, name: 2, tagline: 4, projects: 8, handover: HANDOVER, end: HANDOVER + 2 };
 const SCENES = ["hi", "name", "tagline", "projects"];
 const WIPE = { from: 7.5, to: 9.5 }; // pixel wipe peaks on the drop (beat 8)
@@ -176,7 +178,7 @@ export default function Intro() {
   const order = ["gate", ...Object.keys(STEPS)];
   const reached = (name) => order.indexOf(step) >= order.indexOf(name);
   const handover = step === "handover";
-  const projectIndex = Math.min(site.projects.length - 1, Math.max(0, Math.floor((beat - STEPS.projects) / BEATS_PER_PROJECT)));
+  const projectIndex = Math.min(INTRO_PROJECTS.length - 1, Math.max(0, Math.floor((beat - STEPS.projects) / BEATS_PER_PROJECT)));
 
   const toggleMute = () => {
     const next = !muted;
@@ -233,7 +235,7 @@ export default function Intro() {
           {step === "name" && <SplitRise text={`I'm ${site.name}.`} className="font-serif text-5xl tracking-[-0.02em] sm:text-6xl" />}
           {step === "tagline" && <Tagline text={site.tagline} />}
           {(step === "projects" || handover) && (
-            <ProjectReel key={projectIndex} project={site.projects[projectIndex]} onType={() => musicRef.current?.blip()} />
+            <ProjectReel key={projectIndex} project={INTRO_PROJECTS[projectIndex]} onType={() => musicRef.current?.blip()} />
           )}
         </div>
       </div>
