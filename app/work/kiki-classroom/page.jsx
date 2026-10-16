@@ -86,8 +86,9 @@ export default function KikiClassroomPage() {
         <div className="overflow-hidden rounded-xl border border-[#2b2f38] bg-[#1d2027] shadow-[0_20px_60px_-30px_rgba(0,0,0,0.6)]">
           <div className="flex items-center justify-between border-b border-[#2b2f38] px-4 py-2.5">
             <span className="font-pixel text-[11px] tracking-[0.2em] text-[#e9e6dc]">KIKI CLASSROOM</span>
-            <span className="flex items-center gap-1.5 rounded-sm bg-[#2b3a2f] px-2 py-0.5 font-pixel text-[10px] tracking-widest text-[#7fd29a]">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#7fd29a]" /> LIVE
+            {/* Not a live website: the dashboard runs on William's laptop. */}
+            <span className="rounded-sm border border-[#3a4048] px-2 py-0.5 font-pixel text-[10px] tracking-widest text-[#9aa6b2]">
+              RUNS LOCALLY
             </span>
           </div>
           <Image src={k.image} alt="The Kiki Classroom dashboard: a pixel-art office with six AI agents at their desks." width={1425} height={867} className="w-full" priority />
